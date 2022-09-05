@@ -18,8 +18,8 @@ function CountryDetails({paises ,SetPaises }){
       setIsLoading(false);
     }
     fechDetalhes()
-  },[])
-
+  },[alpha3Code])
+ console.log(detalhes)
   isLoading === false && (
     
       detalhes.borders.forEach((element)=>{
@@ -41,6 +41,7 @@ function CountryDetails({paises ,SetPaises }){
          {isLoading === false && (
           
          <div className="col-7">
+           <img src ={`https://flagpedia.net/data/flags/icon/72x54/${detalhes.alpha2Code.toLowerCase()}.png`} atl=".."/>
             <h1>{detalhes.name.common}</h1>
             <table className="table">
               <thead></thead>
